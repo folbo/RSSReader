@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
+
+namespace ATOMUltimate.Model
+{
+    [XmlRoot("feed")]
+    public class Atom
+    {
+        public string Title { get; set; }
+    }
+}
