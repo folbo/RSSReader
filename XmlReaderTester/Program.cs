@@ -24,26 +24,31 @@ namespace XmlReaderTester
             var atom = new Atom()
             {
                 Title = "asd",
-                Link = new Link()
+                Link = new Link[]
                 {
-                    Name = "Google",
-                    Url = @"http://www.google.pl"
+                    new Link()
+                    {
+                        Title = "Google",
+                        Href = @"http://www.google.pl"
+                    }
                 },
-                Author = new Author()
+                Author = new Person[]
                 {
-                    Name = "STurski",
-                    Email = "qaz@mailnesia.com"
+                    new Person()
+                    {
+                        Name = "STurski",
+                        Email = "qaz@mailnesia.com"
+                    }
                 },
-                Description = "opis",
-                Generator = "Renia lewa i prawa",
-                Language = "pl-PL",
-                LastBuildDate = DateTime.Today,
-                Updated = DateTime.Today,
-                Items = new[]
-                {
-                    new Item() {Title = "pierwszy"},
-                    new Item() {Title = "drugi"},
-                }
+               Category = new Category[]
+               {
+                   new Category()
+                   {
+                       Label = "Kosiarki",
+                       Scheme = "scheme",
+                       Term = "term"
+                   }
+               }
             };
 
 
@@ -55,7 +60,7 @@ namespace XmlReaderTester
 
         private static void Deserialize()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof (Atom), @"http://www.w3.org/2005/Atom");
+            var serializer = new XmlSerializer(typeof (Atom), @"http://www.w3.org/2005/Atom");
 
 
             Stream stream = new FileStream(@"..\..\AtomExample.xml", FileMode.Open);

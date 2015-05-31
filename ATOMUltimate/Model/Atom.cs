@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace ATOMUltimate.Model
@@ -11,44 +6,155 @@ namespace ATOMUltimate.Model
     [XmlRoot(ElementName = "feed")]
     public class Atom
     {
+        [XmlElement(ElementName = "author")]
+        public Person[] Author { get; set; }
+
+        [XmlElement(ElementName = "category")]
+        public Category[] Category { get; set; }
+
+        [XmlElement(ElementName = "contributor")]
+        public Person[] Contributor { get; set; }
+
+        [XmlElement(ElementName = "generator")]
+        public Generator Generator { get; set; }
+
+        [XmlElement(ElementName = "icon")]
+        public string Icon { get; set; }
+
+        [XmlElement(ElementName = "id")]
+        public string Id { get; set; }
+
+        [XmlElement(ElementName = "link")]
+        public Link[] Link { get; set; }
+
+        [XmlElement(ElementName = "logo")]
+        public string Logo { get; set; }
+
+        [XmlElement(ElementName = "rights")]
+        public string Rights { get; set; }
+
+        [XmlElement(ElementName = "subtitle")]
+        public string Subtitle { get; set; }
+
         [XmlElement(ElementName = "title")]
         public string Title { get; set; }
-        [XmlElement(ElementName = "link")]
-        public Link Link { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "lastBuildDate")]
-        public DateTime LastBuildDate { get; set; }
+
         [XmlElement(ElementName = "updated")]
         public DateTime Updated { get; set; }
-        [XmlElement(ElementName = "language")]
-        public string Language { get; set; }
-        [XmlElement(ElementName = "generator")]
-        public string Generator { get; set; }
-        [XmlElement(ElementName = "item")]
-        public Item[] Items { get; set; }
-
-        public Author Author { get; set; }
-
+        
+        [XmlElement(ElementName = "entry")]
+        public Entry[] Entries { get; set; }
     }
 
     public class Link
     {
         [XmlAttribute(AttributeName = "href")]
-        public string Url { get; set; }
-        [XmlText]
-        public string Name { get; set; }
+        public string Href { get; set; }
+
+        [XmlAttribute(AttributeName = "rel")]
+        public string Rel { get; set; }
+
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; }
+
+        [XmlAttribute(AttributeName = "hreflang")]
+        public string HrefLang { get; set; }
+
+        [XmlAttribute(AttributeName = "title")]
+        public string Title { get; set; }
+
+        [XmlAttribute(AttributeName = "length")]
+        public uint Length { get; set; }
     }
 
-    public class Author
+    public class Person
     {
+        [XmlElement(ElementName = "name")]
         public string Name { get; set; }
+
+        [XmlElement(ElementName = "uri")]
+        public string Uri { get; set; }
+
+        [XmlElement(ElementName = "email")]
         public string Email { get; set; }
     }
 
-    public class Item
+    public class Entry
     {
-        public string Title { get; set; }
-        public Link Link { get; set; }
+        [XmlElement(ElementName = "author")]
+        public Person[] Author { get; set; } //done
+
+        [XmlElement(ElementName = "category")]
+        public Category[] Category { get; set; } //done
+
+        [XmlElement(ElementName = "content")]
+        public Content Content { get; set; } //done
+
+        [XmlElement(ElementName = "contributor")]
+        public Person[] Contributor { get; set; } //done
+
+        [XmlElement(ElementName = "id")]
+        public string Id { get; set; } //done
+
+        [XmlElement(ElementName = "link")]
+        public Link[] Link { get; set; } //done
+
+        [XmlElement(ElementName = "published")]
+        public DateTime Published { get; set; } //done
+
+        [XmlElement(ElementName = "rights")]
+        public string Rights { get; set; } //done
+
+        [XmlElement(ElementName = "source")]
+        public string Source { get; set; } //done
+
+        [XmlElement(ElementName = "summary")]
+        public string Summary { get; set; } //done
+
+        [XmlElement(ElementName = "title")]
+        public string Title { get; set; } //done
+
+        [XmlElement(ElementName = "updated")]
+        public DateTime Updated { get; set; } //done
+    }
+
+    public class Content //done
+    {
+        [XmlAttribute(AttributeName = "type")]
+        public TextTypeType Type { get; set; } //done
+
+        [XmlAttribute(AttributeName = "src")]
+        public string Src { get; set; } //done
+    }
+
+    public class Category
+    {
+        [XmlAttribute(AttributeName = "term")]
+        public string Term { get; set; } //done, required
+
+        [XmlAttribute(AttributeName = "scheme")]
+        public string Scheme { get; set; } //done, optional
+
+        [XmlAttribute(AttributeName = "label")]
+        public string Label { get; set; } //done, optional
+    }
+
+    public class Generator
+    {
+        [XmlAttribute(AttributeName = "uri")]
+        public string Uri { get; set; }
+
+        [XmlAttribute(AttributeName = "version")]
+        public string Version { get; set; }
+
+        [XmlText]
+        public string Value { get; set; }
+    }
+
+    public enum TextTypeType
+    {
+        text,
+        html,
+        xhtml
     }
 }
