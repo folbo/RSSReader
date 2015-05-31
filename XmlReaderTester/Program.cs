@@ -13,7 +13,7 @@ namespace XmlReaderTester
         private static void Main(string[] args)
         {
             Serialize();
-            //Deserialize();
+            Deserialize();
         }
 
         private static void Serialize()
@@ -64,6 +64,7 @@ namespace XmlReaderTester
                        Content = new Content()
                        {
                            Src = "google.pl",
+                           Type = TextTypeType.html,
                            Value = "<div>moj content</div>"
                        }
                    }

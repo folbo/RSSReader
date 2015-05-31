@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Diagnostics.Eventing;
+using System.Windows.Controls.Primitives;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -121,13 +121,14 @@ namespace ATOMUltimate.Model
         public DateTime Updated { get; set; } //done
     }
 
-    public class Content : IXmlSerializable//done
+    [Serializable]
+    public class Content : IXmlSerializable
     {
         [XmlAttribute(AttributeName = "type")]
-        public TextTypeType? Type { get; set; } //done
+        public TextTypeType? Type { get; set; }
 
         [XmlAttribute(AttributeName = "src")]
-        public string Src { get; set; } //done
+        public string Src { get; set; }
         
         [XmlText]
         public string Value { get; set; }
@@ -139,6 +140,22 @@ namespace ATOMUltimate.Model
 
         public void ReadXml(XmlReader reader)
         {
+            string type = reader.GetAttribute("type");
+            switch (type)
+            {
+                case "text":
+                    Type = TextTypeType.text;
+                    break;
+                case "html":
+                    Type = TextTypeType.html;
+                    break;
+                case "xhtml":
+                    Type = TextTypeType.xhtml;
+                    break;
+            }
+
+            Src = reader.GetAttribute("src");
+
             Value = reader.ReadInnerXml();
         }
 
