@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="/gus_atom.xsl"?>
+<!--
+                       La Faraono
+                   verkis Boleslaw Prus
+                      tadukis Kabe
+
+                       Capitro Unu
+
+En la tridektria jaro de la felica regado de Ramses XII, Egipto
+festis du solenojn, kiuj plenigis giajn ortodoksajn logantojn per
+fiero kaj felico. En la monato Mehir, en decembro, revenis Tebojn,
+plen kovrita per multekostaj donacoj, la dio Hongu, kiu dum tri
+jaroj kaj  nau monatoj vojagis en la lando Buhten, resanigis tie
+la regan filinon Bent-res kaj forpelis la malbonan spiriton ne 
+nur el la rega familio, sed ec el la citadelo de Buhten.
+
+Nu, jen! Suficas por 512 bitoj. Lasu ke oni vidu mian XSLT-on.
+-->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:starling.us,2007-02-15:/starling.us/starling_us_atom.xml</id>
+  <title>Atomic Starling</title>
+  <updated>2007-02-25T13:37:36Z</updated>
+  <link rel="self" type="application/atom+xml" href="http://starling.us/cgi-bin/gus_atom_xsl.pl?atom=starling_us_atom.xml!sort_order=Category" />
+
+  <author>
+    <name>Gan Uesli Starling</name>
+    <uri>http://starling.us/gan</uri>
+    <email>gan@starling.us</email>
+  </author>
+  
+  <!-- CATEGORY GENERAL -->
+
+  <entry>
+    <title>Horrible Laptop Display</title>
+    <category term="Review"/> 
+    <id>tag:starling.us,2007-03-25:/plendoj/Dell_Glossy_Screen.xml</id>
+    <published>2007-03-25T03:49:00Z</published>
+    <updated>2007-03-25T03:49:00Z</updated>
+    <link href="http://starling.us/plendoj/Dell_Glossy_Screen.xml"/>
+    <summary>Thumbs down on Dell's UltraSharp TrueLife laptop display.</summary>
+    <content>On Dell’s order page there is a pop-up entitled 'Help me decide' claiming their 17-inch, UltraSharp display as being suitable for CAD. That advice lied. Obtaining a timely refund for the product was met with several frustrating delays.
+    </content>
+  </entry>  
+  
+  <!-- CATEGORY ATOM PROTOCOL -->
+
+  <entry>
+    <title>How to Create an Atom Feed</title>
+    <category term="Atom Protocol"/> 
+    <id>tag:starling.us,2007-02-15:/atom/</id>
+    <published>2007-02-15T17:33:00Z</published>
+    <updated>2007-02-25T13:37:35Z</updated>
+    <link href="http://starling.us/atom/"/>
+    <summary>How I created this very Atom feed.</summary>
+    <content>This is a really simple how-to. It may look like a lot, but not to worry. You won’t be needing most of it, not unless you want to be sort of fancy. About half details extra frills which you may not much care much about. And some of what remains describes what *not* to do in very exacting detail. Feel free to either skip or skim through those.
+    </content>
+  </entry>
+  
+  <!-- CATEGORY HAM RADIO -->
+  
+  <entry>
+    <title>KY8D Morse Code Perl Script</title>
+    <category term="Ham Radio"/> 
+    <id>tag:starling.ws,2007-02-20:/morse/</id>
+    <published>2006-02-08T00:00:00Z</published>
+    <updated>2006-03-06T00:00:00Z</updated>
+    <link href="http://69.51.152.43/morse/"/>
+    <summary>Convert any text into Morse code practice drills.</summary>
+    <content>When it came time to renew my Extra Class ham radio license I was chagrined to realize that my copy speed in CW has slipped to down around 13 WPM for plain English. Forgotten entirely were the six extra letters for Esperanto and obscure punctuation marks and prosigns. So I wrote my own Morse code (re)trainer program to use with my favorite MP3 player.
+    </content>
+  </entry>
+  
+  <!-- CATEGORY JACK VANCE -->
+  
+  <entry>
+    <title>Wankh vs Wannek</title>
+    <category term="Jack Vance"/> 
+    <id>tag:starling.us,2007-02-20:/wankh_vs_wannek.html</id>
+    <published>2005-07-03T22:26:38Z</published>
+    <updated>2005-07-03T22:26:38Z</updated>
+    <link href="http://starling.us/wankh_vs_wannek.html"/>
+    <summary>Editorial substituion in the Vance Integral Edition</summary>
+    <content>Should a literary masterpiece published in America surrender both its title and content decades later at the whim of contemporary British gutter slang? I cannot imagine it. Surely the least of Jack Vance's work will long endure past the demise of off-color terms in any local dialect, even that of Her Majesty. Who even knows how many other such terms there might be? If yielding to one, then why not to all? Indeed, do let a Compton rap artist have a go at redacting Shakespere. Would not Londoners very rightly be appalled? Just as rightly am I entitled to heartfelt disappointment over alterations now appearing in a volume of the Vance Integral Edition.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Jack Vance Integral Edition</title>
+    <category term="Jack Vance"/> 
+    <id>tag:starling.us,2007-02-20:/gan/vance_visit_1/</id>
+    <published>2000-01-21T21:15:00Z</published>
+    <updated>2005-07-03T22:32:16Z</updated>
+    <link href="http://starling.us/gan/vance_visit_1"/>
+    <summary>I spend a weekend at the home of Jack and Norma Vance.</summary>
+    <content>Jack Vance has been writing since ten years even before I was born, and is getting quite elderly now. Although gone blind quite some years ago, still he writes. I do enjoy quite a number of authors: Harrison, Herbert, Heinlein, et al. But Jack Vance towers above them all. His writing is timeless “ meaning that often a reader can’t tell when it was written. Thus most of his works will never age.
+    </content>
+  </entry>
+  
+  <!-- CATEGORY MARTIAL ART -->
+  
+  <entry>
+    <title>Martial Art Cults &amp; Myths</title>
+    <category term="Martial Art"/> 
+    <id>tag:wmtkd.us,2007-02-20:/kalamazoo/BullShido.xml</id>
+    <published>2007-01-29T04:53:12Z</published>
+    <updated>2007-02-22T11:37:53Z</updated>
+    <link href="http://wmtkd.us/kalamazoo/BullShido.xml"/>
+    <summary>Is your martial arts school a cult?</summary>
+    <content>There is a euphemism in Eastern philosophy which goes, First you must empty your cup..., which is to say, empty your mind of pre-conceived notions when you set out to learn something new. And this is reasonable advice, as far as it goes. But often you find that some self-acclaimed authority or other requires you to empty your mind not only of preconceptions but also reasoned and well-documented historical perspective. And all too often not only those must be surrendered, but also both your reason and your common sense. If that is the case, then by empty your cup what they really are asking is that you empty out your brain pan. And this is carrying a useful anecdote too far by leagues.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Meditation in Martial Arts</title>
+    <category term="Martial Art"/> 
+    <id>tag:wmtkd.us,2007-02-20:/kalamazoo/ma_meditation.xml</id>
+    <published>2006-11-20T10:00:00Z</published>
+    <updated>2006-11-20T10:00:00Z</updated>
+    <link href="http://wmtkd.us/kalamazoo/ma_meditation.xml"/>
+    <summary>Is your martial arts school a cult?</summary>
+    <content>Once taken entirely for granted as both necessary and required, meditation has, in the past decade, become a topic much debated on martial arts Internet discussion boards. All these debates are initiated by persons who fear it will undermine their own preferred religious tradition. These fears are born entirely of ignorance.
+    </content>
+  </entry> 
+  
+  <!-- CATEGORY MOTORCYCLE -->
+  
+  <entry>
+    <title>Cheyenne, WY</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/solo_1/</id>
+    <published>2000-09-25T00:00:00Z</published>
+    <updated>2005-07-22T00:00:00Z</updated>
+    <link href="http://starling.us/royal_star/solo_1/"/>
+    <summary>Photo journal of solo ride to Cheyenne, WY.</summary>
+    <content>Riding out from Kalamazoo, MI my intended destination is to be the Star Days 2000 motorcycle meet, held this year in Cheyenne, WY.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Indianapolis, IN</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/solo_2/</id>
+    <published>2001-09-11T00:00:00Z</published>
+    <updated>2005-07-22T00:00:01Z</updated>
+    <link href="http://starling.us/royal_star/solo_2/"/>
+    <summary>Photo journal of solo ride to Indianapolis, IN.</summary>
+    <content>A weekend ride from Kalamazoo down to Indianapolis to see the bike drag races as sponsored Yamaha and Star Touring and Riding.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Key West, FL</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/solo_3/</id>
+    <published>2001-11-28T00:00:00Z</published>
+    <updated>2005-07-22T00:00:02Z</updated>
+    <link href="http://starling.us/royal_star/solo_3/"/>
+    <summary>Photo journal of solo ride to Key West, FL.</summary>
+    <content>One needn’t be a geography whiz to estimate that 4,300 miles does seem a rather indirect round-trip route to Florida from Michigan. But then I’m not really planning a route. I never really plan a route, at least not fully. By preference I start out upon a certain road heading in the right general direction and then proceed by whim and dead reckoning after that...unless (or until?) I wind up semi-lost.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Couer d' Alene, ID</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/solo_4/</id>
+    <published>2002-09-12T00:00:00Z</published>
+    <updated>2005-07-22T00:00:03Z</updated>
+    <link href="http://starling.us/royal_star/solo_4/"/>
+    <summary>Photo journal of solo ride to Couer d' Alene, ID</summary>
+    <content>This year I’m riding even farther to visit another, Robert Shoeman and his wife Cindy in Couer d’Alene Idaho. I’m taking an even longer scenic route, up across the Mackinaw Bridge, across the UP, over the bridge above the Soo Locks into Canada, only then turning west. And bringing along my laptop to log my travels closer to real time.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Niagara Falls</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/solo_5/</id>
+    <published>2002-11-07T00:00:00Z</published>
+    <updated>2005-07-22T00:00:04Z</updated>
+    <link href="http://starling.us/royal_star/solo_5/"/>
+    <summary>Photo journal of solo ride to Ivy Lea, Ontario and Niagara Falls</summary>
+    <content>Some years ago I founded a local Buddhist meditation group called the Lama Tsong Khapa Center, this as a fledgling local chapter in the larger and international Gaden for the West foundation. This latter group holds a special meeting annually which this year is sponsored by a sister center in Ottawa. The meeting is to be held in a KOA campground at Ivy Lea in the Thousand Islands region of the St. Lawrence River at the northeastern tip of Lake Ontario. Instead of flying I elect to ride my Royal Star motorcycle.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Charleston, SC</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/solo_6/</id>
+    <published>2003-06-18T00:00:00Z</published>
+    <updated>2005-07-22T00:00:05Z</updated>
+    <link href="http://starling.us/royal_star/solo_6/"/>
+    <summary>Photo journal of solo ride to Charleston, SC</summary>
+    <content>One of my old navy buddies sent me an invitation to his 30-year retirement ceremony. It happens that I’m between jobs from having been downsized from my salaried position of the past twelve years. Had I too chosen to stay in the Navy, that wouldn’t be a worry now.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>New Roads, LA</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/2005-07_Bike_Trip/</id>
+    <published>2005-08-07T00:00:06Z</published>
+    <updated>2005-08-07T00:00:06Z</updated>
+    <link href="http://69.51.152.43/2005-07_Bike_Trip/"/>
+    <summary>Photo journal of solo ride to New Roads, LA</summary>
+    <content>As usual, I am routing my trip to meet up with an old navy buddy along the way, Arron Sissom from Okinawa in 1975, who now lives in Nashville, TN. And additionally, I have my niece’s wedding to attend in Decatur, AL. Those two important events pose a slight constraint on my route, and the latter also on timing. So my usually zig-zag path is a bit more scrunched than usual in that it is completely unplanned, except for those two destination points in the middle.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Bike Show at the Gilmore Car Museum</title>
+    <category term="Motorcycle"/> 
+    <id>tag:starling.us,2007-02-20:/royal_star/2004-06-13_Hickory_Corners/</id>
+    <published>2004-07-22T00:00:00Z</published>
+    <updated>2004-07-22T00:00:00Z</updated>
+    <link href="http://starling.us/royal_star/2004-06-13_Hickory_Corners/"/>
+    <summary>Photo journal of the Gilmore Antique Bike Show</summary>
+    <content>A short jaunt up to Hickory Corners, home of the Gilmore Antique Car Museum where every year they have an antique motorcycle exposition. 
+    </content>
+  </entry>
+  
+  <!-- CATEGORY PERL MODULE -->
+  
+  <entry>
+    <title>Chart::EPS_graph.pm</title>
+    <category term="Perl Module"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_perl_modules/index.xml#Chart-EPS_graph</id>
+    <published>2006-08-15T00:00:00Z</published>
+    <updated>2007-02-04T03:44:00Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_perl_modules/index.xml#Chart-EPS_graph"/>
+    <summary>Multi-trace dual-Y axis graphing</summary>
+    <content>Graphing module for Perl that allows for multiple traces per each of two Y axes. Alternate source repository for CPAN Perl module. Full documentation and examples.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Device::LabJack::Control.pm</title>
+    <category term="Perl Module"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_perl_modules/index.xml/Device-LabJack-Control</id>
+    <published>2006-11-20T09:31:00Z</published>
+    <updated>2007-02-04T03:43:00Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_perl_modules/index.xml#Device-LabJack-Control"/>
+    <summary>OO interface to LabJack device.</summary>
+    <content>Object oriented interface to existing Perl module Device::Labjack. Source repository for non-CPAN Perl module. Full documentation and examples.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Text::CSV::Munge.pm</title>
+    <category term="Perl Module"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_perl_modules/index.xml/Text-CSV-Munge</id>
+    <published>2007-02-04T03:42:00Z</published>
+    <updated>2007-02-04T03:42:00Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_perl_modules/index.xml#Text-CSV-Munge"/>
+    <summary>Munge CSV data files</summary>
+    <content>Suite of Perl modules for munging CSV data files from Tektronix oscilloscopes, particularty strain data. Full documentation and examples.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Tk::EasyGUI.pm</title>
+    <category term="Perl Module"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_perl_modules/index.xml/Tk-EasyGUI</id>
+    <published>2007-01-12T17:17:00Z</published>
+    <updated>2007-02-04T03:48:00Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_perl_modules/index.xml#Tk-EasyGUI"/>
+    <summary>Quick and dirty Perl/Tk GUIs</summary>
+    <content>Here is a way to bang out quick and dirty Perl/Tk GUI's which you may either embed into your Perl scripts, permanently GUI-ifying them, or else build an outboard GUI to emulate the CLI call so that your Perl script might remain GUI-free. Full documentation and examples.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Spreadsheet Avoidance Trick</title>
+    <category term="Perl Script"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_calc_generic_pl/</id>
+    <published>2007-01-25T15:34:00Z</published>
+    <updated>2007-02-03T03:41:57Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_calc_generic_pl/"/>
+    <summary>Keeping reports all in one file, sans links to spreadsheets.</summary>
+    <content>I find it annoying to receive a report which has all of its useful conclusions sequestered into separate files in disparate formats such that one must juggle several windows in order to extract said report's essential content. I would very much prefer to view said info presented concisely and neatly within but a single on-screen window. Full documentation and examples.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Tracking Barometric Pressure</title>
+    <category term="Perl Script"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_barometric_pressure_pl/</id>
+    <published>2007-02-03T03:46:12Z</published>
+    <updated>2007-02-11T05:50:00Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_barometric_pressure_pl/"/>
+    <summary>Track barometric pressure, compensated for elevation.</summary>
+    <content>Suppose you need to know the current barometric pressure, compensated to absolute for your elevation. This script will provide it for you. It displays the readings in a GUI and also records to a file. Full documentation and examples.
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Merging CSV Files</title>
+    <category term="Perl Script"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_tek_csv_merge_pl/</id>
+    <published>2006-08-08T00:00:00Z</published>
+    <updated>2007-02-03T03:38:53Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_tek_csv_merge_pl/"/>
+    <summary>How to merge Tektronix CSV files.</summary>
+    <content>Where I work we have a Tektronix 4-channel digital oscilloscope which saves data in *.csv format. That is good. The bad part is that it saves a separate file for each channel, even though they are synchronous. So what this script does is merge two *.csv files back into one, then graphs them. Full documentation and examples.
+    </content>
+  </entry> 
+  
+  <!-- CATEGORY PERL SCRIPT -->
+  
+  <entry>
+    <title>XML-RPC for Remote Control</title>
+    <category term="Perl Script"/> 
+    <id>tag:starling.us,2007-02-20:/tet/gus_perl/gus_xml-rpc_pl/</id>
+    <published>2005-08-10T00:00:00Z</published>
+    <updated>2006-06-20T03:32:21Z</updated>
+    <link href="http://starling.us/tet/gus_perl/gus_xml-rpc_pl/"/>
+    <summary>XML-RPC Client/Server Pair with Encryption</summary>
+    <content>With this XML-RPC Server/Client pair you can trigger remote PCs to do almost anything. Anything, at least, for which you have written a script in advance. Some example scripts (for testing &amp; backup) are herewith provided.
+    </content>
+  </entry>
+  
+  <!-- CATEGORY XSLT -->
+  
+  <entry>
+    <title>Documentation with XML/XSLT</title>
+    <category term="XSLT"/> 
+    <id>tag:starling.us,2007-02-20:/xml/</id>
+    <published>2005-12-24T22:15:00Z</published>
+    <updated>2007-02-11T16:29:00Z</updated>
+    <link href="http://starling.us/xml/"/>
+    <summary>How to document for the WWW using XML &amp; XSLT</summary>
+    <content>The markup required to create a master document in XML is very simple. It has only a fraction the complexity of a corresponding XHTML file. The reason for this is all of that extra complexity has been handed off for automatic handling by the XSLT stylesheet.
+    </content>
+  </entry>
+  
+<!--
+  
+  <entry>
+    <title></title>
+    <category term=""/> 
+    <id>http://</id>
+    <published></published>
+    <updated></updated>
+    <link href=""/>
+    <summary></summary>
+    <content>
+    </content>
+  </entry>
+  
+-->
+
+</feed>

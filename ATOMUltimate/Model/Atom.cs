@@ -125,6 +125,9 @@ namespace ATOMUltimate.Model
 
         [XmlAttribute(AttributeName = "src")]
         public string Src { get; set; } //done
+
+        [XmlText]
+        public string Value { get; set; }
     }
 
     public class Category

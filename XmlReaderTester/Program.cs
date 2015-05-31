@@ -62,11 +62,12 @@ namespace XmlReaderTester
         {
             var serializer = new XmlSerializer(typeof (Atom), @"http://www.w3.org/2005/Atom");
 
-
-            Stream stream = new FileStream(@"..\..\AtomExample.xml", FileMode.Open);
-
-            var atom = serializer.Deserialize(stream);
-
+            Stream stream1 = new FileStream(@"..\..\AtomExample.xml", FileMode.Open);
+            Stream stream2 = new FileStream(@"..\..\AtomExample2.xml", FileMode.Open);
+            Stream stream3 = new FileStream(@"..\..\AtomExample3.xml", FileMode.Open);
+            var atom1 = serializer.Deserialize(stream1);
+            var atom2 = serializer.Deserialize(stream2);
+            var atom3 = serializer.Deserialize(stream3);
 
             Console.ReadKey();
         }

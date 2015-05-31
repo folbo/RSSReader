@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Atemschutzunfälle</title>
+ <subtitle>Informationsplattform und Sammelstelle</subtitle>
+ <updated>2015-05-18T23:10:33+02:00</updated>
+ <link rel="alternate" type="text/html" hreflang="de" href="http://www.xn--atemschutzunflle-7nb.de" />
+ <link rel="self" type="application/atom+xml" href="http://www.xn--atemschutzunflle-7nb.de/asu.xml" />
+ <logo>http://www.atemschutzunfaelle.eu/images/alogo_a-team.svg</logo>
+ <icon>http://www.atemschutzunfaelle.eu/favicon.ico</icon>
+ <id>http://www.xn--atemschutzunflle-7nb.de/</id>
+ <rights>Copyright 2005-2015 atemschutzunfaelle.eu</rights>
+ <author>
+	 <name>Rolf Eike Beer</name>
+	 <uri>http://www.xn--atemschutzunflle-7nb.de/wirueberuns/redaktion.html#reb</uri>
+	 <email>beer@atemschutzunfaelle.de</email>
+ </author>
+
+ <entry>
+	<title>Südafrika: 17. Mai 2015 - Gebäudebrand - zwei getötete und vier verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/za/2015/u20150517-johannesburg.html</id>
+	<category term="Südafrika" label="Südafrika" />
+	<category term="Afrika" label="Afrika" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/za/2015/u20150517-johannesburg.html' rel='alternate' />
+	<updated>2015-05-18T23:09:50+02:00</updated>
+	<content>In einem siebengeschossigen Gebäude entwickelte sich am Samstag den 16. Mai ein Brand. Um 20 Uhr trafen die ersten Einheiten ein. Im Verlauf der Löscharbeiten wurde ein Angriffstrupp vermisst.</content>
+ </entry>
+ <entry>
+	<title>Dänemark: 3. Mai 2015 - Wohnungsbrand - Explosion - vier verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/dk/2015/u20150503-kopenhagen.html</id>
+	<category term="Dänemark" label="Dänemark" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/dk/2015/u20150503-kopenhagen.html' rel='alternate' />
+	<updated>2015-05-15T14:58:21+02:00</updated>
+	<content>Die Feuerwehr Kopenhagen rückte kurz vor Mittag zu einem Wohnungsbrand im Jagtvej aus. Da die Vermutung bestand, dass die Wohnungsinhaberin – eine ältere Dame – sich noch in der Wohnung befand, wurden zwei Trupps AGT zur Personenrettung eingesetzt.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 3. Mai 2015 - Kellerbrand - thermische Schäden - Funkausfall</title>
+	<id>http://www.atemschutzunfaelle.eu/beinaheunfaelle/2015/b20150503-duesseldorf.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Beinaheunfall" label="Beinaheunfall" />
+	<link href='http://www.atemschutzunfaelle.eu/beinaheunfaelle/2015/b20150503-duesseldorf.html' rel='alternate' />
+	<updated>2015-05-06T20:58:32+02:00</updated>
+	<content>Kellerbrand in einer leerstehenden Papierfabrik. Beim Eintreffen wurde eine deutliche Rauchentwicklung aus dem Keller festgestellt. Ein Trupp ging zur Brandbekämpfung vor und konnte den Brandherd schnell finden. Unrat, Holzpaletten und Papierreste standen in einem 30 qm großen Raum in Flammen.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 30. April 2015 - Dachstuhlbrand - Einsturz - zwei verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150430-hamburg.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150430-hamburg.html' rel='alternate' />
+	<updated>2015-05-01T17:41:16+02:00</updated>
+	<content>Beim Brand eines Mehrfamilienhauses im Stadtteil Wilhelmsburg verletzten sich zwei Feuerwehrangehörige. Das Feuer war um kurz vor 3 Uhr im Dachgeschoss eines vierstöckigen Hauses ausgebrochen.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 11. April 1960 - Großbrand - Stichflamme - drei getötete Kollegen</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/de/1960/u19600411-duesseldorf.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/de/1960/u19600411-duesseldorf.html' rel='alternate' />
+	<updated>2015-04-25T21:40:43+02:00</updated>
+	<content>Um 2.49 Uhr wurde ein Brand bei der Firma Jagenberg entdeckt und bei der Hauptnachrichtenzentrale, so nannte man zu dieser Zeit die Leitstelle, der Feuerwehr gemeldet worden. Dunkle grauschwarze Rauchwolken zogen aus dem 7.000 Quadratmeter großen Gebäudekomplex zwischen der Himmelgeister Straße und Ulenbergstraße.</content>
+ </entry>
+ <entry>
+	<title>Polen: 23. März 2015 - Großbrand - Leitersturz - ein verletzter FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150323-suchedniow.html</id>
+	<category term="Polen" label="Polen" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150323-suchedniow.html' rel='alternate' />
+	<updated>2015-04-10T17:08:53+02:00</updated>
+	<content>Bei der Bekämpfung eines Großbrands stürzte ein Freiwilliger Feuerwehrmann von einer Leiter. Er musste stationär in einer Klinik behandelt werden.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 10. April 2015 - Gebäudebrand - Teileinsturz - ein verletzter FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150410-berlin.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150410-berlin.html' rel='alternate' />
+	<updated>2015-04-10T17:08:52+02:00</updated>
+	<content>Die Berliner Feuerwehr wurde zu einem Brand in einen Wellnessclub nach Prenzlauer Berg alarmiert. Das Feuer, das sich von einem Nebenraum auf rund 200 m² ausbreitete, zog auch in die Zwischendecke des Gebäudes.</content>
+ </entry>
+ <entry>
+	<title>Polen: 18. März 2015 - Großbrand in Wohngebäude - Teileinsturz - ein verletzter FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150318-posen.html</id>
+	<category term="Polen" label="Polen" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150318-posen.html' rel='alternate' />
+	<updated>2015-04-04T18:24:15+02:00</updated>
+	<content>Nächtlicher Großbrand in einem hohen Wohngebäude. Das Brandgeschoss befand sich im obersten, sechsten Geschoss. Die oberen Geschosse waren komplett verraucht.</content>
+ </entry>
+ <entry>
+	<title>Frankreich: 13. März 2015 - Wohnungsbrand - ein verletzter Kollege, eine getötete Kollegin</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/fr/2015/u20150313-paris.html</id>
+	<category term="Frankreich" label="Frankreich" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/fr/2015/u20150313-paris.html' rel='alternate' />
+	<updated>2015-04-04T18:24:14+02:00</updated>
+	<content>Bei einem ausgedehnten Wohnungsbrand in einem zweigeschossigen Reihenhaus starb eine 25-jährige Feuerrwehrfrau, ein Feuerwehrmann wurde schwerverletzt.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 12. Dezember 2014 - Zimmerbrand - Maske verrutscht / Schnittwunde - zwei verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/de/2014/u20141212-anger.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/de/2014/u20141212-anger.html' rel='alternate' />
+	<updated>2015-03-10T20:40:49+01:00</updated>
+	<content>Zimmerbrand im Dachgeschoss eines größeren Wohngebäudes. Aufgrund der in der Wohnung gelagerten hohen Brandlast kam es zu einer starken Rauch- und Hitzeentwicklung. Personen befanden sich bei Eintreffen der Feuerwehr nicht mehr in unmittelbarer Gefahr.</content>
+ </entry>
+ <entry>
+	<title>Belgien: 26. Februar 2015 - Gebäudebrand - Leitersturz - ein verletzter FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/be/2015/u20150226-everbeek.html</id>
+	<category term="Belgien" label="Belgien" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/be/2015/u20150226-everbeek.html' rel='alternate' />
+	<updated>2015-03-03T22:57:14+01:00</updated>
+	<content>Vollbrand eines Nebengebäudes. Zur Brandbekämpfung wurde eine tragbare Leiter eingesetzt. Das Dach war zu diesem Zeitpunkt eingestürzt und der Löscheinsatz sollte von der Leiter erfolgen.</content>
+ </entry>
+ <entry>
+	<title>20. Februar 2015 - Übung - Luftnot</title>
+	<id>http://www.atemschutzunfaelle.eu/probleme/ventile.html#vorfall5</id>
+	<category term="Probleme" label="Probleme mit der Ausrüstung" />
+	<category term="Polen" label="Polen" />
+	<category term="Europa" label="Europa" />
+	<link href="http://www.atemschutzunfaelle.eu/probleme/ventile.html#vorfall5" rel="alternate" />
+	<updated>2015-02-27T17:18:44+01:00</updated>
+	<content>An der Schule für Berufsfeuerwehren in Posen wurde ein Übung &quot;Kellerbrand mit Atemschutznotfall&quot; absolviert. Während ein Angriffstrupp mit dem C-Rohr vorging, unterstützte ein dritter Atemschutzgeräteträger den Schlauch nachzuführen.</content>
+ </entry>
+ <entry>
+	<title>Polen: 19. Februar 2015 - Hochhausbrand - sieben verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150219-warschau.html</id>
+	<category term="Polen" label="Polen" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150219-warschau.html' rel='alternate' />
+	<updated>2015-02-27T17:15:30+01:00</updated>
+	<content>Brand in einem 11-stöckigen Hochhaus, welches noch im Bau befindlich war. Im ersten Obergeschoss brannten Baumaterialien, u.a. Styropor.</content>
+ </entry>
+ <entry>
+	<title>Polen: 16. Februar 2015 - Großbrand - extremes Brandverhalten - fünf verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150216-rejczuchy.html</id>
+	<category term="Polen" label="Polen" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/pl/2015/u20150216-rejczuchy.html' rel='alternate' />
+	<updated>2015-02-27T17:15:29+01:00</updated>
+	<content>Brand eines landwirtschaftlichen Gebäudes (Hühnerstall). Während des ersten Löschangriff kam es zu einem extremen Brandverhalten.</content>
+ </entry>
+ <entry>
+	<title>2014 bis 2015 - Abströmen Dräger PSS-Lungenautomaten</title>
+	<id>http://www.atemschutzunfaelle.eu/probleme/la_hamburg15.html</id>
+	<category term="Probleme" label="Probleme mit der Ausrüstung" />
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<link href="http://www.atemschutzunfaelle.eu/probleme/la_hamburg15.html" rel="alternate" />
+	<updated>2015-02-21T17:37:28+01:00</updated>
+	<content>Die Feuerwehr Hamburg hat bei Übungs- und Brandeinsätzen Fehlfunktionen eingesetzter Lungenautomaten festgestellt. Im konkreten Fall versorgten die Lungenautomaten den Atemschutzträger mit zu viel Atemluft, sodass der mitgeführte Luftvorrat schneller als geplant verbraucht wird.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 11. Februar 2015 - Kellerbrand - Rauchvergiftungen - zwei verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/ohne_as/2015/f20150211-hannover.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Fehlender Atemschutz" label="Fehlender Atemschutz" />
+	<link href='http://www.atemschutzunfaelle.eu/ohne_as/2015/f20150211-hannover.html' rel='alternate' />
+	<updated>2015-02-11T17:44:41+01:00</updated>
+	<content>Eine Rettungswagenbesatzung der Berufsfeuerwehr Hannover hatte im Vorbeifahren aufsteigenden Rauch aus dem Keller bemerkt und sofort weitere Kräfte alarmiert. Die Brandbekämpfer konnten die Flammen, die einen Feuerholzstapel sowie Versorgungsleitungen in Mitleidenschaft gezogen hatten, schnell löschen.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 7. Februar 2015 - Wohnungsbrand - Einsturz - zwei verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150207-berlin.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150207-berlin.html' rel='alternate' />
+	<updated>2015-02-10T21:17:24+01:00</updated>
+	<content>Wohnungsbrand in voller Ausdehnung. Bei den Löscharbeiten wurden zwei Kollegen durch einen herabstürzenden Holzbalken verletzt.</content>
+ </entry>
+ <entry>
+	<title>Frankreich: 5. Februar 2015 - Wohnungsbrand - Explosion einer Gasflasche - fünf verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/fr/2015/u20150205-marseille.html</id>
+	<category term="Frankreich" label="Frankreich" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/fr/2015/u20150205-marseille.html' rel='alternate' />
+	<updated>2015-02-06T21:28:03+01:00</updated>
+	<content>Wohnungsbrand im ersten Obergeschoss. Die erste Einheit beginnt parallel zur Brandbekämpfung eine Personensuche. Um 10.44 Uhr explodiert im ersten Obergeschoss eine haushaltsübliche 13kg-Gasflasche.</content>
+ </entry>
+ <entry>
+	<title>Deutschland: 5. Januar 2015 - extreme Brandausbreitung - acht verletzte FA</title>
+	<id>http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150105-leverkusen.html</id>
+	<category term="Deutschland" label="Deutschland" />
+	<category term="Europa" label="Europa" />
+	<category term="Unfall" label="Unfall" />
+	<link href='http://www.atemschutzunfaelle.eu/unfaelle/de/2015/u20150105-leverkusen.html' rel='alternate' />
+	<updated>2015-01-05T21:24:20+01:00</updated>
+	<content>Am Montagmorgen gegen 3:13 Uhr wurde die Feuerwehr Leverkusen von einem Anwohner zu einem Brand in Opladen gerufen. Zu diesem Zeitpunkt war unbekannt, ob sich noch Personen im Gebäude befanden.</content>
+ </entry>
+</feed>
