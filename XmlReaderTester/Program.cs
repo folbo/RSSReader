@@ -12,8 +12,8 @@ namespace XmlReaderTester
     {
         private static void Main(string[] args)
         {
-            //Serialize();
-            Deserialize();
+            Serialize();
+            //Deserialize();
         }
 
         private static void Serialize()
@@ -47,6 +47,25 @@ namespace XmlReaderTester
                        Label = "Kosiarki",
                        Scheme = "scheme",
                        Term = "term"
+                   }
+               },
+               Entries = new Entry[]
+               {
+                   new Entry()
+                   {
+                       Author = new Person[]
+                       {
+                           new Person()
+                           {
+                               Email = "jacunia@asofj.asd",
+                               Name = "jacek"
+                           }
+                       },
+                       Content = new Content()
+                       {
+                           Src = "google.pl",
+                           Value = "<div>moj content</div>"
+                       }
                    }
                }
             };
