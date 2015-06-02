@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
+using ATOMUltimate;
 using ATOMUltimate.Model;
 
 namespace XmlReaderTester
@@ -9,8 +10,9 @@ namespace XmlReaderTester
     {
         private static void Main(string[] args)
         {
-            Serialize();
-            Deserialize();
+            //Serialize();
+            //Deserialize();
+            SubscriptionManager.Subscribe("http://www.atemschutzunfälle.de/asu.xml");
         }
 
         private static void Serialize()
