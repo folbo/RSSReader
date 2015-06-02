@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Reflection.Emit;
 using System.Windows;
 using System.Xml.Serialization;
 using ATOMUltimate.Model;
@@ -12,6 +11,20 @@ namespace ATOMUltimate
     public static class SubscriptionManager
     {
         public static List<Atom> Feeds = new List<Atom>();
+
+        private const string RelativePath = "feedbase/";
+
+        public static void Initialize()
+        {
+            //load saved feeds into list
+            var feedFiles = Directory.GetFiles(RelativePath);
+
+            foreach (var file in feedFiles)
+            {
+                Feeds.Add(ParseFile(file));
+            }
+        }
+
 
         public static void Subscribe(string url)
         {
@@ -24,6 +37,7 @@ namespace ATOMUltimate
                 catch (Exception)
                 {
                     MessageBox.Show("can't download feed.");
+                    return;
                 }
 
                 //udpate collection
@@ -32,6 +46,12 @@ namespace ATOMUltimate
                 StreamReader sr = new StreamReader(fs);
 
                 string content = sr.ReadToEnd();
+
+                sr.Close();
+                fs.Close();
+
+                File.Delete("temp.xml");
+
                 var feed = ParseContent(content);
                 Feeds.Add(feed);
 
@@ -52,16 +72,29 @@ namespace ATOMUltimate
             return atom;
         }
 
+        private static Atom ParseFile(string filePath)
+        {
+            if (string.IsNullOrEmpty(filePath))
+                return null;
+
+            var serializer = new XmlSerializer(typeof(Atom), @"http://www.w3.org/2005/Atom");
+            var fs = new FileStream(filePath, FileMode.Open);
+
+            var atom = (Atom)serializer.Deserialize(fs);
+
+            return atom;
+        }
+
         public static void SaveFeedToFile(Atom feed)
         {
             if (feed == null) return;
 
-            string relativePath = "feedbase/";
-            if (!Directory.Exists(relativePath))
-                Directory.CreateDirectory(relativePath);
+            
+            if (!Directory.Exists(RelativePath))
+                Directory.CreateDirectory(RelativePath);
 
             string filename = "_" + feed.Title;
-            string filepath = relativePath + filename;
+            string filepath = RelativePath + filename;
             FileStream fs = new FileStream(filepath, FileMode.Create);
 
             XmlSerializer serializer = new XmlSerializer(typeof(Atom), @"http://www.w3.org/2005/Atom");

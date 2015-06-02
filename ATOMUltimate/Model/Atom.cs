@@ -84,6 +84,9 @@ namespace ATOMUltimate.Model
 
     public class Entry
     {
+        [XmlElement(ElementName = "przeczytany")]
+        public bool Przeczytany { get; set; }
+
         [XmlElement(ElementName = "author")]
         public Person[] Author { get; set; } //done
 

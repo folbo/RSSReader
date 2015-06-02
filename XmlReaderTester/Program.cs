@@ -12,7 +12,8 @@ namespace XmlReaderTester
         {
             //Serialize();
             //Deserialize();
-            SubscriptionManager.Subscribe("http://www.atemschutzunfälle.de/asu.xml");
+            SubscriptionManager.Initialize();
+            SubscriptionManager.Subscribe("http://starling.us/cgi-bin/gus_atom_xsl.pl?atom=starling_us_atom.xml!sort_order=Category");
         }
 
         private static void Serialize()
