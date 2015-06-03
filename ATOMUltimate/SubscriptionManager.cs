@@ -25,7 +25,6 @@ namespace ATOMUltimate
             }
         }
 
-
         public static void Subscribe(string url)
         {
             using (var client = new WebClient())
@@ -42,7 +41,7 @@ namespace ATOMUltimate
 
                 //udpate collection
 
-                FileStream fs = new FileStream("temp.xml",FileMode.Open);
+                FileStream fs = new FileStream("temp.xml", FileMode.Open);
                 StreamReader sr = new StreamReader(fs);
 
                 string content = sr.ReadToEnd();
@@ -66,7 +65,7 @@ namespace ATOMUltimate
 
             var serializer = new XmlSerializer(typeof(Atom), @"http://www.w3.org/2005/Atom");
             var stream = GenerateStreamFromString(content);
-
+            
             var atom = (Atom)serializer.Deserialize(stream);
 
             return atom;
@@ -88,7 +87,6 @@ namespace ATOMUltimate
         public static void SaveFeedToFile(Atom feed)
         {
             if (feed == null) return;
-
             
             if (!Directory.Exists(RelativePath))
                 Directory.CreateDirectory(RelativePath);
@@ -100,6 +98,8 @@ namespace ATOMUltimate
             XmlSerializer serializer = new XmlSerializer(typeof(Atom), @"http://www.w3.org/2005/Atom");
 
             serializer.Serialize(fs, feed);
+
+            fs.Close();
         }
 
         private static Stream GenerateStreamFromString(string s)

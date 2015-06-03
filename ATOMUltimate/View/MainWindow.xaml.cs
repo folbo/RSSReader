@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Windows;
 
 namespace ATOMUltimate.View
 {
@@ -10,6 +13,25 @@ namespace ATOMUltimate.View
         public MainWindow()
         {
             InitializeComponent();
+            SubscriptionManager.Initialize();
+
+            foreach (var item in SubscriptionManager.Feeds)
+            {
+                SubscriptionsTreeView.Items.Add(item);
+            }
+        }
+
+        private void SubscribeButton_Click(object sender, RoutedEventArgs e)
+        {
+            SubscribeWindow subscribeWindow = new SubscribeWindow();
+            bool? result = subscribeWindow.ShowDialog();
+            if (result.HasValue)
+            {
+                if (result.Value == true)
+                {
+                    SubscriptionsTreeView.Items.Add(SubscriptionManager.Feeds.Last());
+                }
+            }
         }
     }
 }

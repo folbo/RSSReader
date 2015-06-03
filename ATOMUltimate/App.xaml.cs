@@ -37,12 +37,7 @@ namespace ATOMUltimate
 
         private void ComposeObjects()
         {
-            Current.MainWindow = IoC.Resolve<MainWindow>();
-
-
-            feedType feed = new feedType();
-
-            
+            Current.MainWindow = IoC.Resolve<MainWindow>();            
         }
     }
 }
