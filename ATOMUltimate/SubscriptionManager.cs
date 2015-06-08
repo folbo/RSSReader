@@ -29,36 +29,31 @@ namespace ATOMUltimate
         {
             using (var client = new WebClient())
             {
+                StreamReader sr;
                 try
                 {
-                    client.DownloadFile(url, "temp.xml");
+                    //if()
+                    Stream stream = client.OpenRead(url);
+                    sr = new StreamReader(stream);
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("can't download feed.");
-                    return;
+                    throw;
                 }
 
                 //udpate collection
 
-                FileStream fs = new FileStream("temp.xml", FileMode.Open);
-                StreamReader sr = new StreamReader(fs);
-
                 string content = sr.ReadToEnd();
-
                 sr.Close();
-                fs.Close();
 
-                File.Delete("temp.xml");
-
-                var feed = ParseContent(content);
+                var feed = DeserializeContent(content);
                 Feeds.Add(feed);
 
                 SaveFeedToFile(feed);
             }
         }
 
-        private static Atom ParseContent(string content)
+        private static Atom DeserializeContent(string content)
         {
             if (string.IsNullOrEmpty(content))
                 return null;
@@ -91,7 +86,7 @@ namespace ATOMUltimate
             if (!Directory.Exists(RelativePath))
                 Directory.CreateDirectory(RelativePath);
 
-            string filename = "_" + feed.Title;
+            string filename = feed.Title;
             string filepath = RelativePath + filename;
             FileStream fs = new FileStream(filepath, FileMode.Create);
 

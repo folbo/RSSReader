@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Windows;
+using ATOMUltimate.Model;
 
 namespace ATOMUltimate.View
 {
@@ -29,6 +30,13 @@ namespace ATOMUltimate.View
             {
                 if (result.Value == true)
                 {
+                    //TODO: nie dodawać duplikatów
+                    /*
+                    SubscriptionsTreeView.Items.MoveCurrentToLast();
+                    //SubscriptionsTreeView.Items.R
+                    if (SubscriptionManager.Feeds.Last() == (Atom) SubscriptionsTreeView.SelectedItem)
+                        return;
+                     * */
                     SubscriptionsTreeView.Items.Add(SubscriptionManager.Feeds.Last());
                 }
             }
