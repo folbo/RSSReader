@@ -3,15 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="527" Width="726">
     <Grid>
-        <TreeView x:Name="SubscriptionsTreeView" HorizontalAlignment="Left" Height="435" Margin="10,51,0,0" VerticalAlignment="Top" Width="172"/>
-        <Label Content="My subscriptions" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
-        <StackPanel HorizontalAlignment="Left" Height="100" Margin="334,158,0,0" VerticalAlignment="Top" Width="100"/>
-        <ToolBarTray Background="Crimson" Height="30" VerticalAlignment="Top">
-            <ToolBar BorderBrush="Black" Background="#FF6787AC" Width="500">
-                <Button x:Name="SubscribeButton" Content="Subscribe" Click="SubscribeButton_Click"/>
-                <Button Content="Subscribe"/>
-                <Button Content="Subscribe"/>
-            </ToolBar>
-        </ToolBarTray>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="SubscriptionsTreeView" Grid.Column="0" Margin="10"  Grid.Row="2" ItemsSource="{Binding Path=Feeds, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" />
+        <Label Content="My subscriptions" Grid.Column="0" Grid.Row="1" />
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="141,63,0,0" VerticalAlignment="Top" Width="100"
+                    Grid.Row="2" Grid.Column="1" />
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  >
+            <Button x:Name="SubscribeButton" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
+                    HorizontalAlignment="Left" />
+            <Button x:Name="a" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
+                    HorizontalAlignment="Left" />
+            <Button x:Name="s" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
+                    HorizontalAlignment="Left" />
+        </DockPanel>
+        <WebBrowser Grid.Column="1"  Margin="10" Grid.Row="2" />
+
+
     </Grid>
 </Window>

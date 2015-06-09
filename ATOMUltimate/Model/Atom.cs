@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -26,8 +27,9 @@ namespace ATOMUltimate.Model
         [XmlElement(ElementName = "id")]
         public string Id { get; set; }
 
+        
         [XmlElement(ElementName = "link")]
-        public Link[] Link { get; set; }
+        public List<Link> Link { get; set; }
 
         [XmlElement(ElementName = "logo")]
         public string Logo { get; set; }

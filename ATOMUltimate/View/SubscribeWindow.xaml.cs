@@ -27,8 +27,7 @@ namespace ATOMUltimate.View
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
-            this.Hide();
+            
             List<string> errorList = new List<string>();
             foreach (string url2 in UrlTextBox.Text.Split('\n', '\r'))
             {
@@ -38,8 +37,8 @@ namespace ATOMUltimate.View
                     continue;
                 }
                 string url = url2;
-                if (!url.StartsWith("http://"))
-                    url = "http://" + url;
+                //if (!url.StartsWith("http://"))
+                //    url = "http://" + url;
                 try
                 {
                     SubscriptionManager.Subscribe(url);
@@ -49,7 +48,8 @@ namespace ATOMUltimate.View
                     errorList.Add(url2);
                 }
             }
-
+            this.DialogResult = true;
+            this.Hide();
             if (errorList.Count !=0)
             {
                 MessageBox.Show("Następujące Linki nie mogły być przetworone \n" + errorList.Aggregate((s, s1) => s+"\n"+s1),"Warning",MessageBoxButton.OK,MessageBoxImage.Warning);
