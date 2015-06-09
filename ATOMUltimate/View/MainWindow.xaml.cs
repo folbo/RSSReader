@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using ATOMUltimate.Model;
@@ -26,6 +27,8 @@ namespace ATOMUltimate.View
                 _model.Feeds.Add(feed);
             }
 
+            //na początku programu żaden feed nie jest zaznaczony, więc button jest wygaszony
+            UnsubscribeButton.IsEnabled = false;
 
         }
 
@@ -45,13 +48,23 @@ namespace ATOMUltimate.View
         {
             Atom atom = SubscriptionsTreeView.SelectedItem as Atom;
 
+            if(atom != null)
             AtomBrowser.NavigateToString(atom.ToHtlm());
+
+            if (SubscriptionsTreeView.SelectedItem == null)
+                UnsubscribeButton.IsEnabled = false;
+            else
+                UnsubscribeButton.IsEnabled = true;
         }
 
+        private void UnsubscribeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var item = SubscriptionsTreeView.SelectedItem as Atom;
+            _model.Feeds.Remove(item);
+            SubscriptionManager.Unsubscribe(item);
 
-
-
-
+            
+        }
     }
 
 

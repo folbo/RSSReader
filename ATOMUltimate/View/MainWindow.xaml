@@ -19,7 +19,7 @@
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  >
             <Button x:Name="SubscribeButton" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
-            <Button x:Name="a" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
+            <Button x:Name="UnsubscribeButton" Content="Unsubscribe" Click="UnsubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
             <Button x:Name="s" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />

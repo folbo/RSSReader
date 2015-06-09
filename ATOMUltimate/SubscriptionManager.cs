@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Xml.Serialization;
 using ATOMUltimate.Model;
 
@@ -101,6 +102,13 @@ namespace ATOMUltimate
                 SaveFeedToFile(feed);
             }
         }
+
+        public static void Unsubscribe(Atom atom)
+        {
+            Feeds.Remove(atom);
+            File.Delete(RelativePath+atom.Title);
+        }
+
 
         private static Atom DeserializeContent(Stream content)
         {
