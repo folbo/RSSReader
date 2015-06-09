@@ -1,8 +1,17 @@
 ﻿<Window x:Class="ATOMUltimate.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="527" Width="726">
     <Grid>
-        
+        <TreeView x:Name="SubscriptionsTreeView" HorizontalAlignment="Left" Height="435" Margin="10,51,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label Content="My subscriptions" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="334,158,0,0" VerticalAlignment="Top" Width="100"/>
+        <ToolBarTray Background="Crimson" Height="30" VerticalAlignment="Top">
+            <ToolBar BorderBrush="Black" Background="#FF6787AC" Width="500">
+                <Button x:Name="SubscribeButton" Content="Subscribe" Click="SubscribeButton_Click"/>
+                <Button Content="Subscribe"/>
+                <Button Content="Subscribe"/>
+            </ToolBar>
+        </ToolBarTray>
     </Grid>
 </Window>

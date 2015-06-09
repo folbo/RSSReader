@@ -43,9 +43,14 @@ namespace ATOMUltimate.Model
 
         [XmlElement(ElementName = "updated")]
         public DateTime Updated { get; set; }
-        
+
         [XmlElement(ElementName = "entry")]
         public Entry[] Entries { get; set; }
+
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 
     public class Link
@@ -83,6 +88,9 @@ namespace ATOMUltimate.Model
 
     public class Entry
     {
+        [XmlElement(ElementName = "przeczytany")]
+        public bool Przeczytany { get; set; }
+
         [XmlElement(ElementName = "author")]
         public Person[] Author { get; set; } //done
 

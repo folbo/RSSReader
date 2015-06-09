@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
+using ATOMUltimate;
 using ATOMUltimate.Model;
 
 namespace XmlReaderTester
@@ -9,8 +10,10 @@ namespace XmlReaderTester
     {
         private static void Main(string[] args)
         {
-            Serialize();
-            Deserialize();
+            //Serialize();
+            //Deserialize();
+            SubscriptionManager.Initialize();
+            SubscriptionManager.Subscribe("http://starling.us/cgi-bin/gus_atom_xsl.pl?atom=starling_us_atom.xml!sort_order=Category");
         }
 
         private static void Serialize()
