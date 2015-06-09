@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using ATOMUltimate.Model;
+using RazorEngine;
 
 namespace ATOMUltimate.View
 {
@@ -29,7 +30,7 @@ namespace ATOMUltimate.View
 
             //na początku programu żaden feed nie jest zaznaczony, więc button jest wygaszony
             UnsubscribeButton.IsEnabled = false;
-
+            ShowDefaultView();
         }
 
         private void SubscribeButton_Click(object sender, RoutedEventArgs e)
@@ -49,12 +50,21 @@ namespace ATOMUltimate.View
             Atom atom = SubscriptionsTreeView.SelectedItem as Atom;
 
             if(atom != null)
-            AtomBrowser.NavigateToString(atom.ToHtlm());
+                AtomBrowser.NavigateToString(atom.ToHtlm());
 
             if (SubscriptionsTreeView.SelectedItem == null)
+            {
                 UnsubscribeButton.IsEnabled = false;
+                ShowDefaultView();
+            }
             else
                 UnsubscribeButton.IsEnabled = true;
+        }
+
+        private void ShowDefaultView()
+        {
+            string defaultContent = new StreamReader(@"..\..\View\Default.cshtml").ReadToEnd();
+            AtomBrowser.NavigateToString(Razor.Parse(defaultContent, this));
         }
 
         private void UnsubscribeButton_Click(object sender, RoutedEventArgs e)
