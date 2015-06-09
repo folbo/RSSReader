@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Controls.Primitives;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -103,7 +102,15 @@ namespace ATOMUltimate.Model
         public Link[] Link { get; set; } //done
 
         [XmlElement(ElementName = "published")]
-        public DateTime Published { get; set; } //done
+        public DateTime? Published { get; set; } //done
+
+        public bool PublishedSpecified
+        {
+            get
+            {
+                return Published.HasValue;
+            }
+        }
 
         [XmlElement(ElementName = "rights")]
         public string Rights { get; set; } //done
