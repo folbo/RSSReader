@@ -40,7 +40,7 @@
 <hr/>
 <span>@Atom.Subtitle</span>
 <br/>
-@if (@Atom.Author.Length > 0)
+@if (@Atom.Author != null && @Atom.Author.Length > 0)
 {
     <span>
         By
@@ -86,7 +86,19 @@
                 </a>
             </div>
             <div class="panel-body">
-                @RawText(@entry.Content.Value)
+                <span class="small">@entry.Updated</span>
+                @if (entry.Summary != null && entry.Summary != null)
+                {
+                    @RawText(@entry.Summary)
+                }
+                <hr/>
+                @if (entry.Content != null && entry.Content.Value != null)
+                {
+                    @RawText(@entry.Content.Value)
+                }
+
+
+
             </div>
             <div class="panel-footer">
                 @if (entry.Category !=null && entry.Category.Length > 0)
@@ -99,7 +111,7 @@
 
                 }
 
-                @if (entry.Author.Length > 0)
+                @if (entry.Author !=null && entry.Author.Length > 0)
                 {
                     @:By:
                     foreach (Person person in entry.Author)
@@ -122,16 +134,7 @@
 
         </div>
     }
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <a href="">
-                <h3 class="panel-title">entry title </h3>
-            </a>
-        </div>
-        <div class="panel-body">
-            Panel content
-        </div>
-    </div>
+    
 </div>
 
 
