@@ -21,6 +21,10 @@ namespace ATOMUltimate.View
             SubscriptionManager.Initialize();
             _model = new MainViewModel();
             DataContext = _model;
+            foreach (Atom feed in SubscriptionManager.Feeds)
+            {
+                _model.Feeds.Add(feed);
+            }
 
 
         }
@@ -34,17 +38,20 @@ namespace ATOMUltimate.View
             {
                 _model.Feeds.Add(feed);
             }
-
-            //TODO: nie dodawać duplikatów
-
-
-            //    Items.MoveCurrentToLast();
-            ////SubscriptionsTreeView.Items.R
-            //if (SubscriptionManager.Feeds.Last() == (Atom) SubscriptionsTreeView.SelectedItem)
-            //    return;
-
-            ////SubscriptionsTreeView.Items.Add(SubscriptionManager.Feeds.Last());
+            
         }
+
+        private void SubscriptionsTreeView_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Atom atom = SubscriptionsTreeView.SelectedItem as Atom;
+
+            AtomBrowser.NavigateToString(atom.ToHtlm());
+        }
+
+
+
+
+
     }
 
 

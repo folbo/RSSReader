@@ -81,6 +81,7 @@ namespace ATOMUltimate
                 //udpate collection
 
                 var feed = DeserializeContent(stream);
+                stream.Close();
                 if (Feeds.Select(atom => atom.Title).Contains(feed.Title))
                 {
                     return;
@@ -103,6 +104,7 @@ namespace ATOMUltimate
 
         private static Atom DeserializeContent(Stream content)
         {
+            //todo sprawdzanie czy pasuje do xsd
             var serializer = new XmlSerializer(typeof (Atom), @"http://www.w3.org/2005/Atom");
             var atom = (Atom) serializer.Deserialize(content);
             return atom;
@@ -112,13 +114,10 @@ namespace ATOMUltimate
         {
             if (string.IsNullOrEmpty(filePath))
                 return null;
-
-            var serializer = new XmlSerializer(typeof (Atom), @"http://www.w3.org/2005/Atom");
             var fs = new FileStream(filePath, FileMode.Open);
 
-            var atom = (Atom) serializer.Deserialize(fs);
 
-            return atom;
+            return DeserializeContent(fs);
         }
 
         public static void SaveFeedToFile(Atom feed)
@@ -139,14 +138,5 @@ namespace ATOMUltimate
             fs.Close();
         }
 
-        private static Stream GenerateStreamFromString(string s)
-        {
-            MemoryStream stream = new MemoryStream();
-            StreamWriter writer = new StreamWriter(stream);
-            writer.Write(s);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
-        }
     }
 }

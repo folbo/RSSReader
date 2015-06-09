@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -9,6 +11,19 @@ namespace ATOMUltimate.Model
     [XmlRoot(ElementName = "feed")]
     public class Atom
     {
+        [XmlIgnore]
+        public bool Unread
+        {
+            get { return Entries.Any(entry => !entry.Przeczytany); }
+            set {
+                foreach (Entry entry in Entries)
+                {
+                    entry.Przeczytany = true;
+                }
+            }
+        }
+
+
         [XmlElement(ElementName = "author")]
         public Person[] Author { get; set; }
 
@@ -52,6 +67,18 @@ namespace ATOMUltimate.Model
         public override string ToString()
         {
             return Title;
+        }
+
+        public string ToHtlm()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+
+
+            stringBuilder.Append(
+                "<link rel='stylesheet' href='../../bootstrap/css/bootstrap.min.css'><script src='../../bootstrap/js/bootstrap.min.js'></script>");
+
+            return stringBuilder.ToString();
         }
     }
 

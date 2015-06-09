@@ -106,6 +106,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="bootstrap\css\bootstrap.css.map" />
+    <None Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Resource Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="XML\atom.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -126,6 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\npm.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

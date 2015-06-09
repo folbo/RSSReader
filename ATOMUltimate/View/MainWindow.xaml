@@ -12,7 +12,7 @@
             <RowDefinition Height="30" />
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListView x:Name="SubscriptionsTreeView" Grid.Column="0" Margin="10"  Grid.Row="2" ItemsSource="{Binding Path=Feeds, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" />
+        <ListView x:Name="SubscriptionsTreeView" Grid.Column="0" Margin="10"  Grid.Row="2" ItemsSource="{Binding Path=Feeds, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="SubscriptionsTreeView_SelectionChanged" />
         <Label Content="My subscriptions" Grid.Column="0" Grid.Row="1" />
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="141,63,0,0" VerticalAlignment="Top" Width="100"
                     Grid.Row="2" Grid.Column="1" />
@@ -24,7 +24,7 @@
             <Button x:Name="s" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
         </DockPanel>
-        <WebBrowser Grid.Column="1"  Margin="10" Grid.Row="2" />
+        <WebBrowser Name="AtomBrowser" Grid.Column="1"  Margin="10" Grid.Row="2" />
 
 
     </Grid>

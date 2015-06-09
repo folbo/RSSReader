@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using ATOMUltimate;
@@ -24,7 +25,7 @@ namespace XmlReaderTester
             var atom = new Atom()
             {
                 Title = "asd",
-                Link = new Link[]
+                Link = new List<Link>()
                 {
                     new Link()
                     {
