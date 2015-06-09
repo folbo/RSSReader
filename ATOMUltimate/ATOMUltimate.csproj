@@ -124,6 +124,7 @@
       <DependentUpon>bootstrap.min.js</DependentUpon>
     </None>
     <None Include="View\Atom.cshtml" />
+    <None Include="View\Default.cshtml" />
     <None Include="XML\atom.xsd">
       <SubType>Designer</SubType>
     </None>

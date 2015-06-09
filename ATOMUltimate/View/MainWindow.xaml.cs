@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
 using ATOMUltimate.Model;
 using Microsoft.Win32;
+using RazorEngine;
 
 namespace ATOMUltimate.View
 {
@@ -31,7 +33,9 @@ namespace ATOMUltimate.View
                 _model.Feeds.Add(feed);
             }
 
-
+            //na początku programu żaden feed nie jest zaznaczony, więc button jest wygaszony
+            UnsubscribeButton.IsEnabled = false;
+            ShowDefaultView();
         }
 
         private void SubscribeButton_Click(object sender, RoutedEventArgs e)
@@ -119,12 +123,33 @@ namespace ATOMUltimate.View
             {
                 return;
             }
+            
+            SubscriptionManager.Sync(atom);
+            
             willNavigate = false;
             AtomBrowser.NavigateToString(atom.ToHtlm());
+            
+            if (SubscriptionsTreeView.SelectedItem == null)
+            {
+                UnsubscribeButton.IsEnabled = false;
+                ShowDefaultView();
+            }
+            else
+                UnsubscribeButton.IsEnabled = true;
+        }
+        private void ShowDefaultView()
+        {
+            string defaultContent = new StreamReader(@"..\..\View\Default.cshtml").ReadToEnd();
+            AtomBrowser.NavigateToString(Razor.Parse(defaultContent, this));
+        }
+        private void UnsubscribeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var item = SubscriptionsTreeView.SelectedItem as Atom;
+            _model.Feeds.Remove(item);
+            SubscriptionManager.Unsubscribe(item);
         }
 
-
-
+            
         private void webBrowser1_Navigating(object sender, NavigatingCancelEventArgs e)
         {
             // first page needs to be loaded in webBrowser control
@@ -136,7 +161,6 @@ namespace ATOMUltimate.View
 
             // cancel navigation to the clicked link in the webBrowser control
             e.Cancel = true;
-
             var startInfo = new ProcessStartInfo
             {
                 FileName = e.Uri.ToString()
@@ -144,7 +168,6 @@ namespace ATOMUltimate.View
 
             Process.Start(startInfo);
         }
-
     }
 
 

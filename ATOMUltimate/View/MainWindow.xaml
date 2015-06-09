@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ATOMUltimate.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="527" Width="726">
+        Title="ATOM Ultimate" Height="527" Width="726">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
@@ -19,7 +19,7 @@
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  >
             <Button x:Name="SubscribeButton" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
-            <Button x:Name="a" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
+            <Button x:Name="UnsubscribeButton" Content="Unsubscribe" Click="UnsubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
             <Button x:Name="s" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />

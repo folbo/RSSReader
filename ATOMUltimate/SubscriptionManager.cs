@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.RightsManagement;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Xml.Serialization;
 using ATOMUltimate.Model;
 
@@ -102,6 +104,13 @@ namespace ATOMUltimate
             }
         }
 
+        public static void Unsubscribe(Atom atom)
+        {
+            Feeds.Remove(atom);
+            File.Delete(RelativePath+atom.Title);
+        }
+
+
         private static Atom DeserializeContent(Stream content)
         {
             //todo sprawdzanie czy pasuje do xsd
@@ -114,10 +123,10 @@ namespace ATOMUltimate
         {
             if (string.IsNullOrEmpty(filePath))
                 return null;
-            var fs = new FileStream(filePath, FileMode.Open);
-
-
-            return DeserializeContent(fs);
+            using (var fs = new FileStream(filePath, FileMode.Open))
+            {
+                return DeserializeContent(fs);
+            }
         }
 
         public static void SaveFeedToFile(Atom feed)
@@ -138,5 +147,41 @@ namespace ATOMUltimate
             fs.Close();
         }
 
+
+        public static void Sync(Atom feed)
+        {
+            //znajdź link do feeda  (rel="self")
+            var link = feed.Link.FirstOrDefault(l => l.Rel == "self");
+            if (link == null)
+            {
+                throw new Exception("Nie można odnaleźć linku do feeda.");
+            }
+
+            string url = link.Href;
+
+            if (!CheckUri(url))
+            {
+                throw new Exception();
+            }
+
+            Uri uri = new UriBuilder(url).Uri;
+
+            //pobierz najnowszy content ze strony
+            using (var client = new WebClient())
+            {
+                Stream stream = client.OpenRead(uri);
+
+                var update = DeserializeContent(stream);
+
+                stream.Close();
+
+                //wydłub entry których jeszcze nie ma w pliku
+                var newEntries = update.Entries.Where(e => feed.Entries.All(o => o.Id != e.Id));
+                feed.Entries.InsertRange(0, newEntries);
+            }
+
+            //zapisz plik
+            SaveFeedToFile(feed);
+        }
     }
 }

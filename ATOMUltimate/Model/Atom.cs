@@ -65,7 +65,7 @@ namespace ATOMUltimate.Model
         public DateTime Updated { get; set; }
 
         [XmlElement(ElementName = "entry")]
-        public Entry[] Entries { get; set; }
+        public List<Entry> Entries { get; set; }
 
         public override string ToString()
         {
@@ -81,7 +81,7 @@ namespace ATOMUltimate.Model
             var a = new StreamReader(@"..\..\View\Atom.cshtml");
             _template = a.ReadToEnd();
             a.Close();
-
+            
             try
             {
                 return Razor.Parse(_template, new
@@ -94,7 +94,7 @@ namespace ATOMUltimate.Model
             {
                 Console.WriteLine(e);
             }
-
+            
             return "Error";
         }
     }
