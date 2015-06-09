@@ -45,13 +45,12 @@ namespace ATOMUltimate.View
         {
             Atom atom = SubscriptionsTreeView.SelectedItem as Atom;
 
+            if (atom == null) return;
+
+
+            SubscriptionManager.Sync(atom);
             AtomBrowser.NavigateToString(atom.ToHtlm());
         }
-
-
-
-
-
     }
 
 
