@@ -51,7 +51,6 @@ namespace ATOMUltimate.View
 
             if(atom != null)
                 AtomBrowser.NavigateToString(atom.ToHtlm());
-
             if (SubscriptionsTreeView.SelectedItem == null)
             {
                 UnsubscribeButton.IsEnabled = false;
@@ -59,14 +58,15 @@ namespace ATOMUltimate.View
             }
             else
                 UnsubscribeButton.IsEnabled = true;
+                
+            SubscriptionManager.Sync(atom);
+            AtomBrowser.NavigateToString(atom.ToHtlm());
         }
-
         private void ShowDefaultView()
         {
             string defaultContent = new StreamReader(@"..\..\View\Default.cshtml").ReadToEnd();
             AtomBrowser.NavigateToString(Razor.Parse(defaultContent, this));
         }
-
         private void UnsubscribeButton_Click(object sender, RoutedEventArgs e)
         {
             var item = SubscriptionsTreeView.SelectedItem as Atom;
