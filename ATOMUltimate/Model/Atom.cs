@@ -21,7 +21,7 @@ namespace ATOMUltimate.Model
             set {
                 foreach (Entry entry in Entries)
                 {
-                    entry.Przeczytany = true;
+                    entry.Przeczytany = value;
                 }
             }
         }
@@ -75,15 +75,30 @@ namespace ATOMUltimate.Model
 
         [XmlIgnore]
         private static string _template = new StreamReader(@"..\..\View\Atom.cshtml").ReadToEnd();
+        private static string _css = new StreamReader(@"..\..\bootstrap\css\bootstrap.css").ReadToEnd();
         public string ToHtlm()
         {
-            
+            var a = new StreamReader(@"..\..\View\Atom.cshtml");
+            _template = a.ReadToEnd();
+            a.Close();
 
-            return Razor.Parse(_template, this);
+            try
+            {
+                return Razor.Parse(_template, new
+                {
+                    CSS = _css,
+                    Atom = this
+                });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
-            
+            return "Error";
         }
     }
+
 
     public class Link
     {

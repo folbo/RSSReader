@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='./../bootstrap/css/bootstrap.min.css'>
+    <script src='./../bootstrap/js/bootstrap.min.js'></script>
+</head>
+<body>
+    <div class="container">
+
+        <h1><a href="">@Model.Title</a></h1>
+        <hr />
+        <span>@Model.Subtitle</span>
+        <br />
+        <span>
+            By
+            @foreach (var x in Model.Author)
+            {
+            <li>@x</li>
+            }
+        </span>
+
+        <br />
+        <br />
+        <br />
+        <div class="container">
+
+
+            <div class="panel panel-info">
+                <div class="panel-heading"><a href=""><h3 class="panel-title">entry title <span class="label label-info">New</span></h3></a></div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><a href=""><h3 class="panel-title">entry title </h3></a></div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>

@@ -24,7 +24,7 @@
             <Button x:Name="s" Content="Subscribe" Click="SubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
         </DockPanel>
-        <WebBrowser Name="AtomBrowser" Grid.Column="1"  Margin="10" Grid.Row="2" />
+        <WebBrowser Name="AtomBrowser" Grid.Column="1"  Margin="10" Grid.Row="2" Navigating="webBrowser1_Navigating" />
 
 
     </Grid>
