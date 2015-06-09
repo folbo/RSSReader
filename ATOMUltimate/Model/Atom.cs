@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
+using RazorEngine;
+using RazorEngine.Templating;
 
 namespace ATOMUltimate.Model
 {
@@ -69,16 +72,16 @@ namespace ATOMUltimate.Model
             return Title;
         }
 
+
+        [XmlIgnore]
+        private static string _template = new StreamReader(@"..\..\View\Atom.cshtml").ReadToEnd();
         public string ToHtlm()
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            
 
+            return Razor.Parse(_template, this);
 
-
-            stringBuilder.Append(
-                "<link rel='stylesheet' href='../../bootstrap/css/bootstrap.min.css'><script src='../../bootstrap/js/bootstrap.min.js'></script>");
-
-            return stringBuilder.ToString();
+            
         }
     }
 
