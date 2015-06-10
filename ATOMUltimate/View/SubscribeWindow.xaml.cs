@@ -43,7 +43,7 @@ namespace ATOMUltimate.View
                 {
                     SubscriptionManager.Subscribe(url);
                 }
-                catch (Exception)
+                catch (Exception exception)
                 {
                     errorList.Add(url2);
                 }

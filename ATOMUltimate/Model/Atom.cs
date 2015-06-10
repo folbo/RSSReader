@@ -56,7 +56,7 @@ namespace ATOMUltimate.Model
         public string Rights { get; set; }
 
         [XmlElement(ElementName = "subtitle")]
-        public string Subtitle { get; set; }
+        public HTMLContent Subtitle { get; set; }
 
         [XmlElement(ElementName = "title")]
         public string Title { get; set; }
@@ -228,6 +228,32 @@ namespace ATOMUltimate.Model
             writer.WriteAttributeString("src", Src);
 
             writer.WriteString(Value);
+        }
+    }
+
+    [Serializable]
+    public class HTMLContent : IXmlSerializable
+    {
+        private string Value { get; set; }
+
+        public XmlSchema GetSchema()
+        {
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            Value = reader.ReadInnerXml();
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteString(Value);
+        }
+
+        public override string ToString()
+        {
+            return Value;
         }
     }
 
