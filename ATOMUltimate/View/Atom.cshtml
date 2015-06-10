@@ -13,15 +13,10 @@
     {
         get { return @Model.Atom; }
     }
-    
-    
 
 }
 @helper RawText(string s)
-{
-    @(new RawString(HttpUtility.HtmlDecode(HttpUtility.HtmlDecode(s))))
-    
-}
+{ @(new RawString(s)) }
 
 
 <!DOCTYPE html>
@@ -35,7 +30,15 @@
 </head>
 <body style="background-color: #e5e5e5">
 <h1>
-    <a href="">@Atom.Title</a>
+    @if (Atom.Link != null && @Atom.Link.FirstOrDefault(link => link.Rel.ToLower() == "alternate") != null)
+    {
+        <a href="@Atom.Link.First(link => link.Rel.ToLower() == "alternate").Href">@Atom.Title</a>
+    }
+    else
+    {
+        @Atom.Title
+    }
+
 </h1>
 <hr/>
 <span>@Atom.Subtitle</span>
@@ -101,17 +104,16 @@
 
             </div>
             <div class="panel-footer">
-                @if (entry.Category !=null && entry.Category.Length > 0)
+                @if (entry.Category != null && entry.Category.Length > 0)
                 {
                     @:Category:
                     foreach (Category category in entry.Category)
                     {
                         <span class="label label-default">@category.Term</span>
                     }
-
                 }
 
-                @if (entry.Author !=null && entry.Author.Length > 0)
+                @if (entry.Author != null && entry.Author.Length > 0)
                 {
                     @:By:
                     foreach (Person person in entry.Author)
@@ -134,7 +136,7 @@
 
         </div>
     }
-    
+
 </div>
 
 

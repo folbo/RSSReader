@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Web;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -218,7 +219,7 @@ namespace ATOMUltimate.Model
 
             Src = reader.GetAttribute("src");
 
-            Value = reader.ReadInnerXml();
+            Value = HttpUtility.HtmlDecode(reader.ReadInnerXml());
         }
 
         public void WriteXml(XmlWriter writer)
