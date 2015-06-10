@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls.Primitives;
+using System.Windows.Media;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
@@ -81,30 +82,33 @@ namespace ATOMUltimate
             }
 
             Uri uri = new UriBuilder(url).Uri;
-            using (var client = new WebClient())
-            {
-                Stream stream = client.OpenRead(uri);
-                
 
-                XDocument doc1 = XDocument.Load(stream);
-                XmlSchemaSet schemas = new XmlSchemaSet();
-                schemas.Add(@"http://www.w3.org/2005/Atom", XmlReader.Create(new StreamReader("../../XML/atom.xsd")));
+            using (var client = new WebClient())
+            {               
+#region walidacja
+                Stream stream = client.OpenRead(uri);
+                XDocument doc = XDocument.Load(stream);
+                XmlSchemaSet schema = new XmlSchemaSet();
+                schema.Add(@"http://www.w3.org/2005/Atom", XmlReader.Create(new StreamReader("../../XML/atom.xsd")));
                 bool error = false;
-                doc1.Validate(schemas, (sender, args) =>
+                doc.Validate(schema, (sender, args) =>
                 {
-#region vailid handling
-                    error = true^true;
-#endregion
+                    error = true;
                 });
 
                 if (error)
                 {
-                    throw new Exception("Plik nie jest atomem");
+                    MessageBox.Show("Ta subskrypcja nie jest zgodna ze standardem Atom\n"+url, "Walidacja się nie powiodła", MessageBoxButton.OK,
+                        MessageBoxImage.Information);
                 }
+                stream.Close();
+#endregion
+                
                 stream = client.OpenRead(uri);
                 //udpate collection
                 var feed = DeserializeContent(stream);
                 stream.Close();
+
                 if (Feeds.Select(atom => atom.Title).Contains(feed.Title))
                 {
                     return;

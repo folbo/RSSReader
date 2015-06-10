@@ -12,8 +12,8 @@
             <RowDefinition Height="30" />
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListView x:Name="SubscriptionsTreeView" Grid.Column="0" Margin="10"  Grid.Row="2" ItemsSource="{Binding Path=Feeds, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="SubscriptionsTreeView_SelectionChanged" />
-        <Label Content="My subscriptions" Grid.Column="0" Grid.Row="1" />
+        <ListView x:Name="SubscriptionsTreeView" Grid.Column="0" Margin="10,5,10,10"  Grid.Row="2" ItemsSource="{Binding Path=Feeds, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="SubscriptionsTreeView_SelectionChanged" />
+        <Label Content="My subscriptions" Grid.Column="0" Grid.Row="1" Margin="10,5,10,0" />
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="141,63,0,0" VerticalAlignment="Top" Width="100"
                     Grid.Row="2" Grid.Column="1" />
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  >
@@ -21,9 +21,10 @@
                     HorizontalAlignment="Left" />
             <Button x:Name="UnsubscribeButton" Content="Unsubscribe" Click="UnsubscribeButton_Click" Width="100" Margin="4"
                     HorizontalAlignment="Left" />
-            <CheckBox Name="SyncCheckbox" Content="Sync feeds" Height="15" VerticalAlignment="Center" Margin="10 0 0 0" IsChecked="True" Click="SyncCheckbox_OnClick"/>
+            <CheckBox Name="SyncCheckbox" Height="15" VerticalAlignment="Center" Margin="10 0 0 0" IsChecked="True" Click="SyncCheckbox_OnClick" Content="Sync"/>
         </DockPanel>
         <WebBrowser Name="AtomBrowser" Grid.Column="1"  Margin="10" Grid.Row="2" Navigating="webBrowser1_Navigating" />
+        <Button x:Name="HomeButton" Content="Home" Margin="10,5,473,4" Grid.Column="1" Grid.Row="1" Click="HomeButton_OnClickButton_Click"/>
 
 
     </Grid>

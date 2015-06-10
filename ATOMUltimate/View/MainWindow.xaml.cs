@@ -141,14 +141,22 @@ namespace ATOMUltimate.View
         }
         private void ShowDefaultView()
         {
+            willNavigate = false;
             string defaultContent = new StreamReader(@"..\..\View\Default.cshtml").ReadToEnd();
             AtomBrowser.NavigateToString(Razor.Parse(defaultContent, this));
         }
+
         private void UnsubscribeButton_Click(object sender, RoutedEventArgs e)
         {
             var item = SubscriptionsTreeView.SelectedItem as Atom;
-            _model.Feeds.Remove(item);
-            SubscriptionManager.Unsubscribe(item);
+            if (item != null)
+            {
+                _model.Feeds.Remove(item);
+                SubscriptionsTreeView.SelectedItem = null;
+                SubscriptionManager.Unsubscribe(item);
+                ShowDefaultView();
+            }
+            UnsubscribeButton.IsEnabled = false;
         }
 
             
@@ -186,6 +194,12 @@ namespace ATOMUltimate.View
         {
             if(SyncCheckbox.IsChecked.HasValue)
                 SubscriptionManager.ShouldSync = SyncCheckbox.IsChecked.Value;
+        }
+
+        private void HomeButton_OnClickButton_Click(object sender, RoutedEventArgs e)
+        {
+            SubscriptionsTreeView.SelectedItem = null;
+            ShowDefaultView();
         }
     }
 

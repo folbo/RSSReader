@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Schema;
 
 namespace ATOMUltimate.View
 {
@@ -31,17 +32,18 @@ namespace ATOMUltimate.View
             List<string> errorList = new List<string>();
             foreach (string url2 in UrlTextBox.Text.Split('\n', '\r'))
             {
-                
                 if (string.IsNullOrEmpty(url2))
-                {
                     continue;
-                }
+
                 string url = url2;
-                //if (!url.StartsWith("http://"))
-                //    url = "http://" + url;
+
                 try
                 {
                     SubscriptionManager.Subscribe(url);
+                }
+                catch (XmlSchemaValidationException exception)
+                {
+                    
                 }
                 catch (Exception exception)
                 {
