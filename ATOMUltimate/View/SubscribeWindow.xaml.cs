@@ -52,7 +52,7 @@ namespace ATOMUltimate.View
             this.Hide();
             if (errorList.Count !=0)
             {
-                MessageBox.Show("Następujące Linki nie mogły być przetworone \n" + errorList.Aggregate((s, s1) => s+"\n"+s1),"Warning",MessageBoxButton.OK,MessageBoxImage.Warning);
+                MessageBox.Show("Następujące linki nie mogły być przetworzone: \n" + errorList.Aggregate((s, s1) => s+"\n  "+s1),"Warning",MessageBoxButton.OK,MessageBoxImage.Warning);
             }
 
             

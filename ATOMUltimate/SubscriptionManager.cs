@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.RightsManagement;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls.Primitives;
@@ -107,9 +108,8 @@ namespace ATOMUltimate
         public static void Unsubscribe(Atom atom)
         {
             Feeds.Remove(atom);
-            File.Delete(RelativePath+atom.Title);
+            File.Delete(RelativePath+RemoveSpecialCharacters(atom.Title));
         }
-
 
         private static Atom DeserializeContent(Stream content)
         {
@@ -136,7 +136,7 @@ namespace ATOMUltimate
             if (!Directory.Exists(RelativePath))
                 Directory.CreateDirectory(RelativePath);
 
-            string filename = feed.Title;
+            string filename = RemoveSpecialCharacters(feed.Title);
             string filepath = RelativePath + filename;
             FileStream fs = new FileStream(filepath, FileMode.Create);
 
@@ -146,7 +146,6 @@ namespace ATOMUltimate
 
             fs.Close();
         }
-
 
         public static void Sync(Atom feed)
         {
@@ -182,6 +181,19 @@ namespace ATOMUltimate
 
             //zapisz plik
             SaveFeedToFile(feed);
+        }
+
+        public static string RemoveSpecialCharacters(string str)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in str)
+            {
+                if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '.' || c == '_')
+                {
+                    sb.Append(c);
+                }
+            }
+            return sb.ToString();
         }
     }
 }
