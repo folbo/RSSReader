@@ -159,11 +159,22 @@ namespace ATOMUltimate.View
                 return;
             }
 
+            string linkUrl = e.Uri.ToString();
+
+            //oznacz entry z tym linkiem jako przeczytany
+            //todo: odhaczyć bez przeładowania
+            var atom = SubscriptionsTreeView.SelectedItem as Atom;
+            var entries = atom.Entries.Where(x => x.Link.Any(l => l.Href == linkUrl));
+            foreach (var entry in entries)
+            {
+                entry.Przeczytany = true;
+            }
+
             // cancel navigation to the clicked link in the webBrowser control
             e.Cancel = true;
             var startInfo = new ProcessStartInfo
             {
-                FileName = e.Uri.ToString()
+                FileName = linkUrl
             };
 
             Process.Start(startInfo);
