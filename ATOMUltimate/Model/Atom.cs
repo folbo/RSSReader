@@ -174,7 +174,7 @@ namespace ATOMUltimate.Model
         public string Source { get; set; } //done
 
         [XmlElement(ElementName = "summary")]
-        public string Summary { get; set; } //done
+        public HTMLContent Summary { get; set; } //done
 
         [XmlElement(ElementName = "title")]
         public string Title { get; set; } //done

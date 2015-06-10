@@ -202,6 +202,5 @@ namespace ATOMUltimate.View
         }
 
         private ObservableCollection<Atom> _feeds = new ObservableCollection<Atom>();
-
     }
 }
