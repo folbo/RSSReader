@@ -16,6 +16,7 @@ namespace ATOMUltimate
     public static class SubscriptionManager
     {
         public static List<Atom> Feeds = new List<Atom>();
+        public static bool ShouldSync = true;
 
         private const string RelativePath = "feedbase/";
 
@@ -168,15 +169,22 @@ namespace ATOMUltimate
             //pobierz najnowszy content ze strony
             using (var client = new WebClient())
             {
-                Stream stream = client.OpenRead(uri);
+                try
+                {
+                    Stream stream;
+                    stream = client.OpenRead(uri);
+                    var update = DeserializeContent(stream);
 
-                var update = DeserializeContent(stream);
+                    stream.Close();
 
-                stream.Close();
-
-                //wydłub entry których jeszcze nie ma w pliku
-                var newEntries = update.Entries.Where(e => feed.Entries.All(o => o.Id != e.Id));
-                feed.Entries.InsertRange(0, newEntries);
+                    //wydłub entry których jeszcze nie ma w pliku
+                    var newEntries = update.Entries.Where(e => feed.Entries.All(o => o.Id != e.Id));
+                    feed.Entries.InsertRange(0, newEntries);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Nie można się połączyć z serwerem. Sprawdź połączenie internetowe ");
+                }
             }
 
             //zapisz plik

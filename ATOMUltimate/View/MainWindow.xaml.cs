@@ -21,6 +21,8 @@ namespace ATOMUltimate.View
         private readonly MainViewModel _model;
         private bool willNavigate;
 
+
+
         public MainWindow()
         {
             SetBrowserFeatureControl();
@@ -123,8 +125,8 @@ namespace ATOMUltimate.View
             {
                 return;
             }
-            
-            SubscriptionManager.Sync(atom);
+            if(SubscriptionManager.ShouldSync)
+                SubscriptionManager.Sync(atom);
             
             willNavigate = false;
             AtomBrowser.NavigateToString(atom.ToHtlm());
@@ -178,6 +180,12 @@ namespace ATOMUltimate.View
             };
 
             Process.Start(startInfo);
+        }
+
+        private void SyncCheckbox_OnClick(object sender, RoutedEventArgs e)
+        {
+            if(SyncCheckbox.IsChecked.HasValue)
+                SubscriptionManager.ShouldSync = SyncCheckbox.IsChecked.Value;
         }
     }
 
